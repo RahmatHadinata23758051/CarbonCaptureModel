@@ -1,0 +1,39 @@
+=== Model Evaluation ===
+
+RandomForest:
+  RMSE: 1.7430
+  MAE:  1.3135
+  R2:   0.9890
+
+XGBoost:
+  RMSE: 1.6673
+  MAE:  1.2651
+  R2:   0.9899
+
+=== Feature Importance (Best Model) ===
+solar_radiation_w_m2: 0.9405
+temp_x_radiation: 0.0373
+day_of_year: 0.0032
+moisture_x_temp: 0.0025
+air_temperature_c: 0.0020
+soil_p_mg_kg: 0.0020
+soil_n_mg_kg: 0.0018
+soil_moisture_percent: 0.0016
+air_temp_rolling_6h: 0.0014
+soil_ec_ms_cm: 0.0008
+soil_ph: 0.0008
+soil_temperature_c: 0.0008
+air_temp_lag_1h: 0.0007
+rainfall_mm: 0.0006
+solar_rad_lag_1h: 0.0006
+soil_k_mg_kg: 0.0005
+air_co2_ppm: 0.0005
+air_humidity_percent: 0.0005
+co2_lag_1h: 0.0005
+wind_speed_m_s: 0.0005
+hour_of_day: 0.0004
+month: 0.0004
+air_pressure_hpa: 0.0004
+light_lux: 0.0000
+latitude: 0.0000
+longitude: 0.0000
