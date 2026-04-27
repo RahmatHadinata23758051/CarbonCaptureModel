@@ -39,13 +39,13 @@ class CarbonCapturePredictor:
             'rainfall_mm': 0.0,
             'wind_speed_m_s': 0.5,
             
-            'soil_moisture_percent': payload['soil_7in1']['soil_moisture_percent'],
-            'soil_temperature_c': payload['soil_7in1']['soil_temperature_c'],
-            'soil_ec_ms_cm': payload['soil_7in1']['soil_ec_ms_cm'],
-            'soil_ph': payload['soil_7in1']['soil_ph'],
-            'soil_n_mg_kg': payload['soil_7in1']['soil_n_mg_kg'],
-            'soil_p_mg_kg': payload['soil_7in1']['soil_p_mg_kg'],
-            'soil_k_mg_kg': payload['soil_7in1']['soil_k_mg_kg'],
+            'soil_moisture_percent': payload.get('soil_7in1', {}).get('soil_moisture_percent', 35.0),
+            'soil_temperature_c': payload.get('soil_7in1', {}).get('soil_temperature_c', 25.0),
+            'soil_ec_ms_cm': payload.get('soil_7in1', {}).get('soil_ec_ms_cm', 0.5),
+            'soil_ph': payload.get('soil_7in1', {}).get('soil_ph', 6.5),
+            'soil_n_mg_kg': payload.get('soil_7in1', {}).get('soil_n_mg_kg', 1200.0),
+            'soil_p_mg_kg': payload.get('soil_7in1', {}).get('soil_p_mg_kg', 45.0),
+            'soil_k_mg_kg': payload.get('soil_7in1', {}).get('soil_k_mg_kg', 250.0),
         }
         return data
 
